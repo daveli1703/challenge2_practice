@@ -1,3 +1,3 @@
 # Design Reasoning
 
-Validation belongs in the service layer because it represents business rules that must be enforced consistently regardless of how the application is accessed. Keeping validation in the service layer ensures controllers remain lightweight and maintains a clear separation of concerns.
+Input validation is performed at the beginning of each method to ensure the system fails fast when invalid data is provided, with IllegalArgumentException used to clearly signal incorrect user input, while the conversion logic strictly follows the single defined rule that one cup equals 250 millilitres, and the methods are intentionally kept simple and readable to improve testability, maintainability, and overall code clarity.
